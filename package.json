@@ -23,9 +23,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
+    "jest": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
+    "lint": "yarn run lint:base ./src",
     "lint:base": "$(yarn bin eslint) --ext \".js,.jsx,.ts,.tsx\"",
-    "lint": "yarn run lint:base .",
     "lint:ci": "CI=true yarn run lint --format compact && yarn run typeCheck"
   },
   "eslintConfig": {
@@ -50,9 +51,13 @@
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
     "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
     "eslint-import-resolver-typescript": "^3.5.3",
     "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
-    "gh-pages": "^5.0.0"
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^5.0.0",
+    "prettier": "^2.8.4"
   }
 }
