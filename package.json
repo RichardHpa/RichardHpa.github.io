@@ -27,7 +27,8 @@
     "eject": "react-scripts eject",
     "lint": "yarn run lint:base ./src",
     "lint:base": "$(yarn bin eslint) --ext \".js,.jsx,.ts,.tsx\"",
-    "lint:ci": "CI=true yarn run lint --format compact && yarn run typeCheck"
+    "lint:ci": "CI=true yarn run lint --format compact && yarn run typeCheck",
+    "typeCheck": "npx tsc --noEmit"
   },
   "eslintConfig": {
     "extends": [
