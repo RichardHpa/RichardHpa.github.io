@@ -2,19 +2,27 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import { createTheme, ThemeProvider } from '@mui/material/styles'
-import { HashRouter } from 'react-router-dom'
-
-const theme = createTheme({})
+import { ThemeProvider, CssBaseline, Box } from '@mui/material'
+import { darkTheme } from 'themes/dark'
+import { BrowserRouter } from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
-    <HashRouter>
-      <ThemeProvider theme={theme}>
-        <App />
+    <BrowserRouter>
+      <ThemeProvider theme={darkTheme}>
+        <CssBaseline />
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            minHeight: '100vh',
+          }}
+        >
+          <App />
+        </Box>
       </ThemeProvider>
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>,
 )
 
