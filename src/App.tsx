@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import { Layout } from 'components/Layout'
 import { NoMatch } from 'components/NoMatch'
 
-const Home = () => {
+export const Home = () => {
   return (
     <Typography variant='h3' component='div' sx={{ flexGrow: 1 }} textAlign='center'>
       Portfolio Coming Soon
