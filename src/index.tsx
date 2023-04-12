@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { ThemeProvider, CssBaseline, Box } from '@mui/material'
-import { darkTheme } from 'themes/dark'
-import { BrowserRouter } from 'react-router-dom'
+import { lightTheme } from 'themes/light'
+import { HashRouter } from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <ThemeProvider theme={darkTheme}>
+    <HashRouter>
+      <ThemeProvider theme={lightTheme}>
         <CssBaseline />
         <Box
           sx={{
@@ -22,7 +22,7 @@ root.render(
           <App />
         </Box>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
 )
 
